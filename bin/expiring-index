@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const Indexer = require('../lib/expiring-index');
+
+const argv = process.argv;
+
+const indexer = new Indexer({
+  network: argv[2] && argv[2] === 'main' ? 'main' : 'regtest'
+});
+
+(async() => {
+  await indexer.open();
+})().catch((err) => {
+  console.error(err.stack);
+  process.exit(1);
+});
