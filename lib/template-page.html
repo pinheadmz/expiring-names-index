@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Expiring HNS Names</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Expiring HNS Names</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
 
-<body>
-{{TABLES}}
-</body>
-
-</html> 
+  <body>
+    <div class="w-screen h-screen mx-auto bg-gray-200">
+      <div
+        class="absolute h-full border border-gray-700 border-2-2 border-opacity-20"
+        style="left: 50%"
+      ></div>
+      <div class="h-full p-10 overflow-auto wrap">{{TABLES}}</div>
+    </div>
+  </body>
+</html>

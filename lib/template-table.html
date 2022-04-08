@@ -1,5 +1,23 @@
-
-<b>Block: {{HEIGHT}} ({{DAYS}} days, {{HOURS}} hours {{RELATIVE}})</b>
-<div style="font-family: monospace; white-space: pre">
-{{NAMES}}
+<div
+  id="{{HEIGHT}}"
+  class="flex {{SIDE}} items-center justify-between w-full mb-8 right-timeline"
+>
+  <div class="order-1 w-5/12"></div>
+  <div
+    class="z-20 flex items-center order-1 h-8 bg-gray-800 rounded-full shadow-xl w-fit"
+  >
+    <span class="px-3 mx-auto text-lg font-semibold text-white">
+      {{HEIGHT}}
+    </span>
+  </div>
+  <div
+    class="order-1 w-5/12 px-6 py-4 transition duration-150 {{COLOR}} rounded-lg shadow-xl hover:-translate-y-1"
+  >
+    <span class="mb-3 text-xl font-bold">
+      ({{DAYS}} days, {{HOURS}} hours {{RELATIVE}})
+    </span>
+    <ul class="text-sm">
+      {{NAMES}}
+    </ul>
+  </div>
 </div>
